@@ -1,0 +1,181 @@
+[gd_scene format=4 uid="uid://cojjb2kvkj6fg"]
+
+[ext_resource type="Script" uid="uid://hfydmsqb1n1o" path="res://Scenes/tower_top.gd" id="1_7rlmy"]
+[ext_resource type="Texture2D" uid="uid://dj7ijld36phug" path="res://Tilesets/tower_floor.png" id="1_377mt"]
+[ext_resource type="Texture2D" uid="uid://cpc8fhv48nk2h" path="res://Tilesets/fuh.png" id="2_7rlmy"]
+[ext_resource type="Texture2D" uid="uid://hupn3reuw6e8" path="res://Tilesets/Grafika_bez_nazwy (1).png" id="2_fw1gr"]
+[ext_resource type="Texture2D" uid="uid://cihr0xkuprmpj" path="res://Tilesets/Tower_walls.png" id="2_jqjjw"]
+[ext_resource type="Texture2D" uid="uid://bsbjltl23vt2f" path="res://Tilesets/Grafika_bez_nazwy 1 (1).png" id="3_g0jmr"]
+[ext_resource type="Texture2D" uid="uid://dqox10fl5smn3" path="res://Tilesets/Grafika_bez_nazwy 2 (1).png" id="4_vjxuo"]
+[ext_resource type="PackedScene" uid="uid://bsx4tsx1bjc8n" path="res://Characters/aurinko_animation.tscn" id="5_b4s0e"]
+[ext_resource type="Texture2D" uid="uid://krgkeo66l648" path="res://Tilesets/k.png" id="5_iay3k"]
+[ext_resource type="PackedScene" uid="uid://bumxiuvjilupq" path="res://Characters/kuutamo_animation.tscn" id="6_i3mlr"]
+[ext_resource type="PackedScene" uid="uid://blkcm5y6b86gm" path="res://Art/character_icons.tscn" id="11_g0jmr"]
+[ext_resource type="AudioStream" uid="uid://bgwr7gqkdeuha" path="res://Musik/im falling.mp3" id="12_vjxuo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdwbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fw1gr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g0jmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vjxuo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8168a"]
+texture = ExtResource("5_iay3k")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dcvbq"]
+sources/0 = SubResource("TileSetAtlasSource_8168a")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rlmy"]
+texture = ExtResource("1_377mt")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b5s7k"]
+texture = ExtResource("2_7rlmy")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7jvf"]
+texture = ExtResource("5_iay3k")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fdwbu"]
+sources/0 = SubResource("TileSetAtlasSource_7rlmy")
+sources/1 = SubResource("TileSetAtlasSource_b5s7k")
+sources/2 = SubResource("TileSetAtlasSource_a7jvf")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3mlr"]
+texture = ExtResource("2_jqjjw")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSet" id="TileSet_k7u70"]
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "walls"
+terrain_set_0/terrain_0/color = Color(9.26517e-07, 0.47162986, 0.04924448, 1)
+sources/0 = SubResource("TileSetAtlasSource_i3mlr")
+
+[node name="TowerTop" type="Node2D" unique_id=425313967]
+script = ExtResource("1_7rlmy")
+
+[node name="CharacterIcons" parent="." unique_id=679314213 instance=ExtResource("11_g0jmr")]
+
+[node name="AnimatedSprite2D" parent="CharacterIcons" index="0" unique_id=363920015]
+z_index = 2
+position = Vector2(34, -5)
+scale = Vector2(0.03, 0.03)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2125561664]
+position = Vector2(-45.5, -0.9999987)
+scale = Vector2(3.6093748, 4.125)
+sprite_frames = SubResource("SpriteFrames_fdwbu")
+autoplay = "default"
+frame_progress = 0.5323903
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=701636128]
+tile_map_data = PackedByteArray("AAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_dcvbq")
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=1058964304]
+tile_map_data = PackedByteArray("AAD4//7/AAABAAEAAAD4////AAABAAAAAAD4/wAAAAABAAAAAAD4/wEAAAAAAAEAAAD5//7/AAAAAAEAAAD5////AAAAAAEAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD6//7/AAAAAAAAAAD6////AAABAAEAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD7//7/AAAAAAEAAAD7////AAAAAAAAAAD7/wAAAAABAAAAAAD7/wEAAAABAAEAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAABAAEAAAD8/wEAAAAAAAEAAAD9//7/AAABAAEAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAEAAAD+//7/AAAAAAAAAAD+////AAABAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAABAAAAAAD///7/AAABAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAAAAAD//wEAAAAAAAEAAAAAAP7/AAAAAAAAAAAAAP//AAABAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAABAP7/AAAAAAEAAAABAP//AAABAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAACAP7/AAABAAAAAAACAP//AAABAAEAAAACAAAAAAAAAAAAAAACAAEAAAABAAAAAAADAP7/AQAAAAAAAAADAP//AQAAAAAAAAADAAAAAQAAAAAAAAADAAEAAQAAAAAAAAD3//7/AQAAAAEAAAD3////AQAAAAEAAAD3/wAAAQAAAAEAAAD3/wEAAQAAAAEAAAD4/wIAAQAAAAAAAFD5/wIAAQAAAAAAAFD6/wIAAQAAAAAAAFD7/wIAAQAAAAAAAFD8/wIAAQAAAAAAAFD9/wIAAQAAAAAAAFD+/wIAAQAAAAAAAFD//wIAAQAAAAAAAFAAAAIAAQAAAAAAAFABAAIAAQAAAAAAAFACAAIAAQAAAAAAAFA=")
+tile_set = SubResource("TileSet_fdwbu")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1314293799]
+tile_map_data = PackedByteArray("AAADAAIAAAACAAIAAAADAAEAAAACAAEAAAADAAAAAAACAAEAAAADAP//AAACAAEAAAADAP7/AAACAAEAAAADAP3/AAACAAAAAAACAAIAAAABAAIAAAACAAEAAAABAAEAAAACAAAAAAABAAEAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAACAP3/AAABAAAAAAABAAIAAAABAAIAAAABAAEAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAAAAAAAAAIAAAABAAIAAAAAAAEAAAABAAEAAAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAAAAP7/AAABAAEAAAAAAP3/AAABAAAAAAD//wIAAAABAAIAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAD/////AAABAAEAAAD///7/AAABAAEAAAD///3/AAABAAAAAAD+/wIAAAABAAIAAAD+/wEAAAABAAEAAAD+/wAAAAABAAEAAAD+////AAABAAEAAAD+//7/AAABAAEAAAD+//3/AAABAAAAAAD9/wIAAAABAAIAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAAAAAD8/wIAAAABAAIAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAAAAAD7/wIAAAABAAIAAAD7/wEAAAABAAEAAAD7/wAAAAABAAEAAAD7////AAABAAEAAAD7//7/AAABAAEAAAD7//3/AAABAAAAAAD6/wIAAAABAAIAAAD6/wEAAAABAAEAAAD6/wAAAAABAAEAAAD6////AAABAAEAAAD6//7/AAABAAEAAAD6//3/AAABAAAAAAD5/wIAAAABAAIAAAD5/wEAAAABAAEAAAD5/wAAAAABAAEAAAD5////AAABAAEAAAD5//7/AAABAAEAAAD5//3/AAABAAAAAAD4/wIAAAABAAIAAAD4/wEAAAABAAEAAAD4/wAAAAABAAEAAAD4////AAABAAEAAAD4//7/AAABAAEAAAD4//3/AAABAAAAAAD3/wIAAAAAAAIAAAD3/wEAAAAAAAEAAAD3//7/AAAAAAEAAAD3//3/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_k7u70")
+
+[node name="Stuff" type="TileMapLayer" parent="." unique_id=1583033135]
+
+[node name="AurinkoAnimation" parent="." unique_id=318403092 instance=ExtResource("5_b4s0e")]
+
+[node name="kuutamo_animation" parent="." unique_id=1917730098 instance=ExtResource("6_i3mlr")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1348209920]
+position = Vector2(-45, 0)
+zoom = Vector2(5, 5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1690020544]
+stream = ExtResource("12_vjxuo")
+autoplay = true
+
+[editable path="CharacterIcons"]

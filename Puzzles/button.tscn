@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dmibtdsddw5ao"]
+
+[ext_resource type="Script" uid="uid://pfrx7wir2ocy" path="res://Puzzles/button.gd" id="1_257qs"]
+[ext_resource type="Texture2D" uid="uid://d2dcbj4cxqnkj" path="res://Tilesets/szyszekgaygaygay.png" id="1_knyce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7u70"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_257qs"]
+atlas = ExtResource("1_knyce")
+region = Rect2(15, 64, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcvbq"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"pushed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_257qs")
+}],
+"loop": 1,
+"name": &"unpushed",
+"speed": 5.0
+}]
+
+[node name="Button" type="Area2D" unique_id=346095126]
+script = ExtResource("1_257qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1999490104]
+shape = SubResource("RectangleShape2D_k7u70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=914570879]
+sprite_frames = SubResource("SpriteFrames_dcvbq")
+animation = &"unpushed"
+autoplay = "unpushed"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

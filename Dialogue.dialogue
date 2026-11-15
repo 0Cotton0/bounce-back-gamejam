@@ -1,0 +1,31 @@
+~ start
+do SceneManager.emit_signal("animation", "KuutamoNormal")
+Kuutamo: Will you? Or should I take the trouble myself?
+do SceneManager.emit_signal("animation", "AurinkoMeh")
+Aurinko: W-wait...-
+do SceneManager.emit_signal("animation", "KuutamoAngry")
+Kuutamo: Wait? WAIT?!
+do SceneManager.emit_signal('move_back')
+Kuutamo: I waited for this my whole life!
+do SceneManager.emit_signal('move_forward')
+do SceneManager.emit_signal("animation", "KuutamoSad")
+Kuutamo: Can't you see? You're the villan in this story!
+do SceneManager.emit_signal("animation", "KuutamoCrazy")
+Kuutamo: Once I get rid of you EVERYONE will love me!
+do SceneManager.emit_signal("animation", "AurinkoNotOkay")
+Aurinko: ...wait...
+do SceneManager.emit_signal("animation", "KuutamoAngry")
+Kuutamo: What, can't you speak? You sound like a broken record.
+do SceneManager.emit_signal('move_back_more')
+do SceneManager.emit_signal("animation", "AurinkoNotOkay")
+Aurinko: ...
+do SceneManager.emit_signal("animation", "KuutamoCrazy")
+Kuutamo: All their love, all their attention, all those songs they'll write about me...
+Kuutamo: Just one thought makes me wanna rip your heart out of your chest with my bare hands...
+do SceneManager.emit_signal('move_back_more_more')
+do SceneManager.emit_signal("animation", "AurinkoTraumatized")
+Aurinko: ...
+do SceneManager.emit_signal("animation", "None")
+do SceneManager.emit_signal('im_falling')
+do SceneManager.emit_signal("change_scene", "res://Scenes/Scene1.tscn")
+=> END

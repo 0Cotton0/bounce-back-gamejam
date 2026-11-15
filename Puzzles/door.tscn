@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1k6cbfaj38qc"]
+
+[ext_resource type="Script" uid="uid://cc1p8pt8i3aot" path="res://Puzzles/door.gd" id="1_t7dhy"]
+[ext_resource type="Texture2D" uid="uid://k6rl3qdfgjr4" path="res://Tilesets/szyszlings_is_too_gay.png" id="1_ywsti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7u70"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdwbu"]
+atlas = ExtResource("1_ywsti")
+region = Rect2(48, 48, 16, 16)
+
+[node name="Door" type="StaticBody2D" unique_id=648891637]
+script = ExtResource("1_t7dhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538805949]
+shape = SubResource("RectangleShape2D_k7u70")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341520095]
+texture = SubResource("AtlasTexture_fdwbu")

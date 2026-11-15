@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cwbj25kdcdkpe"]
+
+[ext_resource type="Texture2D" uid="uid://2v3i5j26m1ka" path="res://UI/controls.png" id="1_apm78"]
+[ext_resource type="Script" uid="uid://caqg8d4vcdsp5" path="res://Characters/controls.gd" id="1_ginkf"]
+[ext_resource type="Texture2D" uid="uid://byiufjeknpdeo" path="res://UI/unnamed.png" id="2_x3aio"]
+
+[node name="Controls" type="Node2D" unique_id=54276417]
+script = ExtResource("1_ginkf")
+
+[node name="Unnamed" type="Sprite2D" parent="." unique_id=1054222870]
+position = Vector2(-3.333374, -24)
+scale = Vector2(0.18229166, 0.18229166)
+texture = ExtResource("2_x3aio")
+
+[node name="Controls" type="Sprite2D" parent="." unique_id=187940233]
+position = Vector2(0, -2.9802322e-08)
+scale = Vector2(0.50390625, 0.50390625)
+texture = ExtResource("1_apm78")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=655956591]
+zoom = Vector2(5, 5)

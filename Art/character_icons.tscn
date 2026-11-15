@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://blkcm5y6b86gm"]
+
+[ext_resource type="Texture2D" uid="uid://dlcp4i6lic1gf" path="res://Art/Aurinko-happi.png" id="1_5m0yu"]
+[ext_resource type="Script" uid="uid://do366yjy2ab4u" path="res://Art/character_icons.gd" id="1_qk7jd"]
+[ext_resource type="Texture2D" uid="uid://dghw6o33rlsyg" path="res://Art/Aurinko-meh.png" id="2_qk7jd"]
+[ext_resource type="Texture2D" uid="uid://cyo5rd8j5f5qt" path="res://Art/Aurinko-not-okay.png" id="3_fe47o"]
+[ext_resource type="Texture2D" uid="uid://bprocdwpvxt4t" path="res://Art/Aurinko-traumatized.png" id="4_hv70u"]
+[ext_resource type="Texture2D" uid="uid://d576x3u3teiq" path="res://Art/Aurinko.png" id="5_1mk8p"]
+[ext_resource type="Texture2D" uid="uid://tp5ri22x4ln2" path="res://Art/Kuutamo-angry.png" id="6_fp143"]
+[ext_resource type="Texture2D" uid="uid://cjbjmbewknpm3" path="res://Art/Kuutamo-happi.png" id="7_ukq6c"]
+[ext_resource type="Texture2D" uid="uid://c8ylnwudo14gw" path="res://Art/Kuutamo-sad.png" id="8_y5xnf"]
+[ext_resource type="Texture2D" uid="uid://d2vg0xpg4l3wu" path="res://Art/Kuutamo-skeri.png" id="9_abogb"]
+[ext_resource type="Texture2D" uid="uid://dnbdcagxfe0lf" path="res://Art/Kuutamo.png" id="10_d6xpp"]
+[ext_resource type="Texture2D" uid="uid://dv1i5mpcnq3l5" path="res://Art/Kuutamo_crazy.png" id="11_cm0qi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk7jd"]
+atlas = ExtResource("1_5m0yu")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe47o"]
+atlas = ExtResource("2_qk7jd")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv70u"]
+atlas = ExtResource("5_1mk8p")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mk8p"]
+atlas = ExtResource("3_fe47o")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp143"]
+atlas = ExtResource("4_hv70u")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukq6c"]
+atlas = ExtResource("6_fp143")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5xnf"]
+atlas = ExtResource("11_cm0qi")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abogb"]
+atlas = ExtResource("7_ukq6c")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6xpp"]
+atlas = ExtResource("10_d6xpp")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm0qi"]
+atlas = ExtResource("8_y5xnf")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7dri"]
+atlas = ExtResource("9_abogb")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdwbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk7jd")
+}],
+"loop": 1,
+"name": &"AurinkoHappi",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe47o")
+}],
+"loop": 1,
+"name": &"AurinkoMeh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv70u")
+}],
+"loop": 1,
+"name": &"AurinkoNormal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mk8p")
+}],
+"loop": 1,
+"name": &"AurinkoNotOkay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp143")
+}],
+"loop": 1,
+"name": &"AurinkoTraumatized",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukq6c")
+}],
+"loop": 1,
+"name": &"KuutamoAngry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5xnf")
+}],
+"loop": 1,
+"name": &"KuutamoCrazy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abogb")
+}],
+"loop": 1,
+"name": &"KuutamoHappi",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6xpp")
+}],
+"loop": 1,
+"name": &"KuutamoNormal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm0qi")
+}],
+"loop": 1,
+"name": &"KuutamoSad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7dri")
+}],
+"loop": 1,
+"name": &"KuutamoSkeri",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"None",
+"speed": 5.0
+}]
+
+[node name="CharacterIcons" type="StaticBody2D" unique_id=679314213]
+script = ExtResource("1_qk7jd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=363920015]
+sprite_frames = SubResource("SpriteFrames_fdwbu")
+animation = &"None"

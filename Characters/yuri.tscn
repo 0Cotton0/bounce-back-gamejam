@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bv7sgfgjepfv2"]
+
+[ext_resource type="Texture2D" uid="uid://ccvkpbcfi4ug6" path="res://Characters/Kuutamo-walksie.png" id="1_rhos5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7u70"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0drs"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(0, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h1ex"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(0, 896, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rswa"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(0, 1344, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tet1"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(0, 448, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk10u"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(0, 896, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb3yx"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(448, 896, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olff2"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(896, 896, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db7yg"]
+atlas = ExtResource("1_rhos5")
+region = Rect2(1344, 896, 448, 448)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcvbq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0drs")
+}],
+"loop": 1,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h1ex")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rswa")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tet1")
+}],
+"loop": 1,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk10u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb3yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olff2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db7yg")
+}],
+"loop": 1,
+"name": &"walk_left_slowly",
+"speed": 5.0
+}]
+
+[node name="Yuri" type="StaticBody2D" unique_id=78356169]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1481153264]
+shape = SubResource("RectangleShape2D_k7u70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1777267317]
+scale = Vector2(0.044084825, 0.044084825)
+sprite_frames = SubResource("SpriteFrames_dcvbq")
+animation = &"walk_left_slowly"

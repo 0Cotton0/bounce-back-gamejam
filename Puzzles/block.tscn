@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bfkryvlo05kux"]
+
+[ext_resource type="Texture2D" uid="uid://d2dcbj4cxqnkj" path="res://Tilesets/szyszekgaygaygay.png" id="1_1uebr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fdwbu"]
+bounce = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7u70"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4bnc"]
+atlas = ExtResource("1_1uebr")
+region = Rect2(0, 64, 16, 16)
+
+[node name="Block" type="RigidBody2D" unique_id=174391617 groups=["Pushable"]]
+collision_layer = 4
+collision_mask = 15
+physics_material_override = SubResource("PhysicsMaterial_fdwbu")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 12.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2131187989]
+shape = SubResource("RectangleShape2D_k7u70")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=306823840]
+position = Vector2(2.0861626e-07, -2.0861626e-07)
+texture = SubResource("AtlasTexture_g4bnc")
