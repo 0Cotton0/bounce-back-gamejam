@@ -1,0 +1,25 @@
+~ start
+do SceneManager.emit_signal("animation", "AurinkoNotOkay")
+Aurinko: And so I fell.... Or jumped
+Aurinko: I thought I was dead but I... I was revived...?
+do SceneManager.emit_signal("animation", "AurinkoMeh")
+Aurinko: Not like I give a damn about it.
+Aurinko: Kuutamo is stuck there. On top of a tower, a cage desinged to imprison me.
+do SceneManager.emit_signal("animation", "AurinkoNormal")
+Aurinko: It need someone there, someone filled with hatred.
+do SceneManager.emit_signal("animation", "AurinkoTraumatized")
+Aurinko: It... feed on me... Or at least it used to untill Kuutamo, the Beloved Hero, ruined everything!
+Aurinko: ...The tower needs to feast on.
+do SceneManager.emit_signal("animation", "AurinkoNotOkay")
+Aurinko: ...
+Aurinko: Poor Kuutamo...
+Aurinko: Her soul...
+Aurinko: So much hate has to be really overwhelming...
+do SceneManager.emit_signal("animation", "AurinkoMeh")
+Aurinko: ...
+do SceneManager.emit_signal("animation", "AurinkoNormal")
+Aurinko: I have to save her.
+do SceneManager.emit_signal("animation", "AurinkoHappi")
+Aurinko: I have to bounce back.
+do SceneManager.emit_signal("animation", "None")
+=> END

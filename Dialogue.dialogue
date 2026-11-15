@@ -27,5 +27,4 @@ do SceneManager.emit_signal("animation", "AurinkoTraumatized")
 Aurinko: ...
 do SceneManager.emit_signal("animation", "None")
 do SceneManager.emit_signal('im_falling')
-do SceneManager.emit_signal("change_scene", "res://Scenes/Scene1.tscn")
 => END

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bb7jmjwwve665"]
+
+[ext_resource type="Texture2D" uid="uid://dr08teb65fsqd" path="res://Art/YURIIIII.png" id="1_p8f8c"]
+[ext_resource type="Texture2D" uid="uid://dpllsvc1j06v3" path="res://Art/sorry.png" id="2_i6vy8"]
+
+[node name="Yuri" type="StaticBody2D" unique_id=642864973]
+
+[node name="Yuriiiii" type="Sprite2D" parent="." unique_id=1009837814]
+z_index = 1
+position = Vector2(489, 8.999998)
+scale = Vector2(0.44783336, 0.44783336)
+texture = ExtResource("1_p8f8c")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1886859694]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Sorry" type="Sprite2D" parent="." unique_id=996405165]
+position = Vector2(-154, 33.999996)
+scale = Vector2(1.8756943, 1.8756943)
+texture = ExtResource("2_i6vy8")

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://2v3i5j26m1ka" path="res://UI/controls.png" id="1_apm78"]
 [ext_resource type="Script" uid="uid://caqg8d4vcdsp5" path="res://Characters/controls.gd" id="1_ginkf"]
 [ext_resource type="Texture2D" uid="uid://byiufjeknpdeo" path="res://UI/unnamed.png" id="2_x3aio"]
+[ext_resource type="AudioStream" uid="uid://b2nfkd7e5yca8" path="res://Musik/fallen sun.mp3" id="4_x3aio"]
 
 [node name="Controls" type="Node2D" unique_id=54276417]
 script = ExtResource("1_ginkf")
@@ -19,3 +20,7 @@ texture = ExtResource("1_apm78")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655956591]
 zoom = Vector2(5, 5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1130871004]
+stream = ExtResource("4_x3aio")
+autoplay = true

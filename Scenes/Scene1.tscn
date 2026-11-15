@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://ch6le67haeewi"]
 
 [ext_resource type="PackedScene" uid="uid://wrciqtkmcfcp" path="res://Characters/character_body_2d.tscn" id="1_bxtam"]
+[ext_resource type="Script" uid="uid://bmaye8vxatbgv" path="res://Scenes/scene_1.gd" id="1_o7ujg"]
 [ext_resource type="Texture2D" uid="uid://c666kvhemf076" path="res://Tilesets/floor_purpur.png" id="2_ixm4b"]
 [ext_resource type="Texture2D" uid="uid://drmchin746am5" path="res://Tilesets/floor_purpur_gay.png" id="3_cqpro"]
 [ext_resource type="Texture2D" uid="uid://dm4lcy7yqsjqe" path="res://Tilesets/walls_blu_EVEN_better.png" id="3_d5i7s"]
@@ -10,9 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://0vsmtk4orbmm" path="res://Tilesets/walls_purpur.png" id="5_hdne0"]
 [ext_resource type="Texture2D" uid="uid://231li5a0kbv5" path="res://Tilesets/szyszlings_gay.png" id="5_ixm4b"]
 [ext_resource type="Texture2D" uid="uid://k6rl3qdfgjr4" path="res://Tilesets/szyszlings_is_too_gay.png" id="8_weq3x"]
+[ext_resource type="AudioStream" uid="uid://cctd5d3nln8he" path="res://Musik/lilac tower.mp3" id="11_g4bnc"]
+[ext_resource type="PackedScene" uid="uid://blkcm5y6b86gm" path="res://Art/character_icons.tscn" id="13_4rku1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_80eni"]
-load_path = "res://.godot/imported/walls_blu_better.png-1dd9f63b7d16da86fa9319c07e3d1dae.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5i7s"]
 texture = SubResource("CompressedTexture2D_80eni")
@@ -374,6 +376,7 @@ sources/4 = SubResource("TileSetAtlasSource_hdne0")
 sources/5 = SubResource("TileSetAtlasSource_qxgy8")
 
 [node name="Node2D" type="Node2D" unique_id=442943678]
+script = ExtResource("1_o7ujg")
 metadata/_edit_horizontal_guides_ = [112.0]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=151748779]
@@ -389,6 +392,7 @@ tile_map_data = PackedByteArray("AAD+//r/BQABAAEAAAD///r/BQABAAEAAAAAAPr/BQABAAE
 tile_set = SubResource("TileSet_jard6")
 
 [node name="CharacterBody2D" parent="Stuff" unique_id=2069550474 instance=ExtResource("1_bxtam")]
+position = Vector2(-9, 70)
 
 [node name="Camera2D" type="Camera2D" parent="Stuff/CharacterBody2D" unique_id=1349564728]
 zoom = Vector2(5, 5)
@@ -400,3 +404,11 @@ limit_bottom = 112
 [node name="SceneEntrance" parent="." unique_id=15163675 instance=ExtResource("4_jard6")]
 position = Vector2(-8, -102)
 next_scene = "res://Scenes/scene_2.tscn"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=901005764]
+stream = ExtResource("11_g4bnc")
+autoplay = true
+
+[node name="CharacterIcons" parent="." unique_id=679314213 instance=ExtResource("13_4rku1")]
+position = Vector2(69, 32)
+scale = Vector2(0.03, 0.03)

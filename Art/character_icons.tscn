@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d2vg0xpg4l3wu" path="res://Art/Kuutamo-skeri.png" id="9_abogb"]
 [ext_resource type="Texture2D" uid="uid://dnbdcagxfe0lf" path="res://Art/Kuutamo.png" id="10_d6xpp"]
 [ext_resource type="Texture2D" uid="uid://dv1i5mpcnq3l5" path="res://Art/Kuutamo_crazy.png" id="11_cm0qi"]
+[ext_resource type="Texture2D" uid="uid://0vsmtk4orbmm" path="res://Tilesets/walls_purpur.png" id="13_fe47o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qk7jd"]
 atlas = ExtResource("1_5m0yu")
@@ -56,6 +57,10 @@ region = Rect2(0, 0, 3000, 3000)
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7dri"]
 atlas = ExtResource("9_abogb")
 region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjuh0"]
+atlas = ExtResource("13_fe47o")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fdwbu"]
 animations = [{
@@ -147,7 +152,10 @@ animations = [{
 "name": &"KuutamoSkeri",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjuh0")
+}],
 "loop": 1,
 "name": &"None",
 "speed": 5.0
@@ -159,3 +167,4 @@ script = ExtResource("1_qk7jd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=363920015]
 sprite_frames = SubResource("SpriteFrames_fdwbu")
 animation = &"None"
+autoplay = "None"

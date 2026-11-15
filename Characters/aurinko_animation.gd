@@ -24,3 +24,5 @@ func move_back_more_more():
 	
 func im_falling():
 	$AnimationPlayer.play("im_falling")
+	await get_tree().create_timer(1.30).timeout
+	get_tree().change_scene_to_file('res://Scenes/Scene1.tscn')

@@ -250,7 +250,7 @@ script = ExtResource("1_tdiv4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=627364306]
 scale = Vector2(0.04196987, 0.041969866)
 sprite_frames = SubResource("SpriteFrames_dcvbq")
-animation = &"move_right"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=63652011]
 position = Vector2(0, 4)
